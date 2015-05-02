@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+
+development:
+  <<: *default
+  database: MRPGM_development
+  username: MRPGM
+  password: MRPGM
+
+test:
+  <<: *default
+  database: MRPGM_test
+
+production:
+  <<: *default
+  database: MRPGM_production
+  username: MRPGM
+  password: <%= ENV['MRPGM_DATABASE_PASSWORD'] %>
