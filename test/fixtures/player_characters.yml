@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  specialization: MyString
+  favoured_attribute1: MyString
+  favoured_attribute2: MyString
+  major_skill1: MyString
+  major_skill2: MyString
+  major_skill3: MyString
+  major_skill4: MyString
+  major_skill5: MyString
+  minor_skill1: MyString
+  minor_skill2: MyString
+  minor_skill3: MyString
+  minor_skill4: MyString
+  minor_skill5: MyString
+
+two:
+  specialization: MyString
+  favoured_attribute1: MyString
+  favoured_attribute2: MyString
+  major_skill1: MyString
+  major_skill2: MyString
+  major_skill3: MyString
+  major_skill4: MyString
+  major_skill5: MyString
+  minor_skill1: MyString
+  minor_skill2: MyString
+  minor_skill3: MyString
+  minor_skill4: MyString
+  minor_skill5: MyString

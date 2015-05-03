@@ -1,0 +1,52 @@
+= form_for @player_character do |f|
+  - if @player_character.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@player_character.errors.count, "error")} prohibited this player_character from being saved:"
+      %ul
+        - @player_character.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :specialization
+    = f.text_field :specialization
+  .field
+    = f.label :birthsign
+    = f.text_field :birthsign
+  .field
+    = f.label :favoured_attribute1
+    = f.text_field :favoured_attribute1
+  .field
+    = f.label :favoured_attribute2
+    = f.text_field :favoured_attribute2
+  .field
+    = f.label :major_skill1
+    = f.text_field :major_skill1
+  .field
+    = f.label :major_skill2
+    = f.text_field :major_skill2
+  .field
+    = f.label :major_skill3
+    = f.text_field :major_skill3
+  .field
+    = f.label :major_skill4
+    = f.text_field :major_skill4
+  .field
+    = f.label :major_skill5
+    = f.text_field :major_skill5
+  .field
+    = f.label :minor_skill1
+    = f.text_field :minor_skill1
+  .field
+    = f.label :minor_skill2
+    = f.text_field :minor_skill2
+  .field
+    = f.label :minor_skill3
+    = f.text_field :minor_skill3
+  .field
+    = f.label :minor_skill4
+    = f.text_field :minor_skill4
+  .field
+    = f.label :minor_skill5
+    = f.text_field :minor_skill5
+  .actions
+    = f.submit 'Save'

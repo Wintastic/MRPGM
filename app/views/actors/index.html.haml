@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Name
       %th Race
       %th Gender
       %th Level
@@ -19,7 +20,6 @@
       %th Speed
       %th Strength
       %th Willpower
-      %th Birthsign
       %th Heavy armour
       %th Medium armour
       %th Spear
@@ -60,6 +60,7 @@
   %tbody
     - @actors.each do |actor|
       %tr
+        %td= actor.name
         %td= actor.race
         %td= actor.gender
         %td= actor.level
@@ -76,7 +77,6 @@
         %td= actor.speed
         %td= actor.strength
         %td= actor.willpower
-        %td= actor.birthsign
         %td= actor.heavy_armour
         %td= actor.medium_armour
         %td= actor.spear

@@ -1,0 +1,47 @@
+%h1 Listing player_characters
+
+%table
+  %thead
+    %tr
+      %th Specialization
+      %th Birthsign
+      %th Favoured attribute1
+      %th Favoured attribute2
+      %th Major skill1
+      %th Major skill2
+      %th Major skill3
+      %th Major skill4
+      %th Major skill5
+      %th Minor skill1
+      %th Minor skill2
+      %th Minor skill3
+      %th Minor skill4
+      %th Minor skill5
+      %th
+      %th
+      %th
+
+  %tbody
+    - @player_characters.each do |player_character|
+      %tr
+        %td= player_character.specialization
+        %td= player_character.birthsign
+        %td= player_character.favoured_attribute1
+        %td= player_character.favoured_attribute2
+        %td= player_character.major_skill1
+        %td= player_character.major_skill2
+        %td= player_character.major_skill3
+        %td= player_character.major_skill4
+        %td= player_character.major_skill5
+        %td= player_character.minor_skill1
+        %td= player_character.minor_skill2
+        %td= player_character.minor_skill3
+        %td= player_character.minor_skill4
+        %td= player_character.minor_skill5
+        %td= link_to 'Show', player_character
+        %td= link_to 'Edit', edit_player_character_path(player_character)
+        %td= link_to 'Destroy', player_character, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Player character', new_player_character_path

@@ -5,7 +5,9 @@
       %ul
         - @actor.errors.full_messages.each do |msg|
           %li= msg
-
+  .field
+    = f.label :name
+    = f.text_field :name
   .field
     = f.label :race
     = f.text_field :race
@@ -54,9 +56,6 @@
   .field
     = f.label :willpower
     = f.number_field :willpower
-  .field
-    = f.label :birthsign
-    = f.text_field :birthsign
   .field
     = f.label :heavy_armour
     = f.number_field :heavy_armour
