@@ -1,0 +1,160 @@
+= form_for @actor do |f|
+  - if @actor.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@actor.errors.count, "error")} prohibited this actor from being saved:"
+      %ul
+        - @actor.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :race
+    = f.text_field :race
+  .field
+    = f.label :gender
+    = f.text_field :gender
+  .field
+    = f.label :level
+    = f.number_field :level
+  .field
+    = f.label :character_class
+    = f.text_field :character_class
+  .field
+    = f.label :health
+    = f.number_field :health
+  .field
+    = f.label :magicka
+    = f.number_field :magicka
+  .field
+    = f.label :fatigue
+    = f.number_field :fatigue
+  .field
+    = f.label :encumbrance
+    = f.number_field :encumbrance
+  .field
+    = f.label :agility
+    = f.number_field :agility
+  .field
+    = f.label :endurance
+    = f.number_field :endurance
+  .field
+    = f.label :intelligence
+    = f.number_field :intelligence
+  .field
+    = f.label :luck
+    = f.number_field :luck
+  .field
+    = f.label :personality
+    = f.number_field :personality
+  .field
+    = f.label :speed
+    = f.number_field :speed
+  .field
+    = f.label :strength
+    = f.number_field :strength
+  .field
+    = f.label :willpower
+    = f.number_field :willpower
+  .field
+    = f.label :birthsign
+    = f.text_field :birthsign
+  .field
+    = f.label :heavy_armour
+    = f.number_field :heavy_armour
+  .field
+    = f.label :medium_armour
+    = f.number_field :medium_armour
+  .field
+    = f.label :spear
+    = f.number_field :spear
+  .field
+    = f.label :acrobatics
+    = f.number_field :acrobatics
+  .field
+    = f.label :armourer
+    = f.number_field :armourer
+  .field
+    = f.label :axe
+    = f.number_field :axe
+  .field
+    = f.label :blunt_weapon
+    = f.number_field :blunt_weapon
+  .field
+    = f.label :long_blade
+    = f.number_field :long_blade
+  .field
+    = f.label :block
+    = f.number_field :block
+  .field
+    = f.label :light_armour
+    = f.number_field :light_armour
+  .field
+    = f.label :marksman
+    = f.number_field :marksman
+  .field
+    = f.label :sneak
+    = f.number_field :sneak
+  .field
+    = f.label :athletics
+    = f.number_field :athletics
+  .field
+    = f.label :hand_to_hand
+    = f.number_field :hand_to_hand
+  .field
+    = f.label :short_blade
+    = f.number_field :short_blade
+  .field
+    = f.label :unarmoured
+    = f.number_field :unarmoured
+  .field
+    = f.label :illusion
+    = f.number_field :illusion
+  .field
+    = f.label :mercantile
+    = f.number_field :mercantile
+  .field
+    = f.label :speechcraft
+    = f.number_field :speechcraft
+  .field
+    = f.label :alchemy
+    = f.number_field :alchemy
+  .field
+    = f.label :conjuration
+    = f.number_field :conjuration
+  .field
+    = f.label :enchant
+    = f.number_field :enchant
+  .field
+    = f.label :security
+    = f.number_field :security
+  .field
+    = f.label :alteration
+    = f.number_field :alteration
+  .field
+    = f.label :destruction
+    = f.number_field :destruction
+  .field
+    = f.label :mysticism
+    = f.number_field :mysticism
+  .field
+    = f.label :restoration
+    = f.number_field :restoration
+  .field
+    = f.label :fire_resist
+    = f.number_field :fire_resist
+  .field
+    = f.label :frost_resist
+    = f.number_field :frost_resist
+  .field
+    = f.label :poison_resist
+    = f.number_field :poison_resist
+  .field
+    = f.label :shock_resist
+    = f.number_field :shock_resist
+  .field
+    = f.label :magicka_resist
+    = f.number_field :magicka_resist
+  .field
+    = f.label :disease_resist
+    = f.number_field :disease_resist
+  .actions
+    = f.submit 'Save'

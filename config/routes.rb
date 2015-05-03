@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :actors
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'

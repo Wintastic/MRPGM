@@ -1,0 +1,119 @@
+%h1 Listing actors
+
+%table
+  %thead
+    %tr
+      %th Race
+      %th Gender
+      %th Level
+      %th Character class
+      %th Health
+      %th Magicka
+      %th Fatigue
+      %th Encumbrance
+      %th Agility
+      %th Endurance
+      %th Intelligence
+      %th Luck
+      %th Personality
+      %th Speed
+      %th Strength
+      %th Willpower
+      %th Birthsign
+      %th Heavy armour
+      %th Medium armour
+      %th Spear
+      %th Acrobatics
+      %th Armourer
+      %th Axe
+      %th Blunt weapon
+      %th Long blade
+      %th Block
+      %th Light armour
+      %th Marksman
+      %th Sneak
+      %th Athletics
+      %th Hand to hand
+      %th Short blade
+      %th Unarmoured
+      %th Illusion
+      %th Mercantile
+      %th Speechcraft
+      %th Alchemy
+      %th Conjuration
+      %th Enchant
+      %th Security
+      %th Alteration
+      %th Destruction
+      %th Mysticism
+      %th Restoration
+      %th Fire resist
+      %th Frost resist
+      %th Poison resist
+      %th Shock resist
+      %th Magicka resist
+      %th Disease resist
+      %th
+      %th
+      %th
+
+  %tbody
+    - @actors.each do |actor|
+      %tr
+        %td= actor.race
+        %td= actor.gender
+        %td= actor.level
+        %td= actor.character_class
+        %td= actor.health
+        %td= actor.magicka
+        %td= actor.fatigue
+        %td= actor.encumbrance
+        %td= actor.agility
+        %td= actor.endurance
+        %td= actor.intelligence
+        %td= actor.luck
+        %td= actor.personality
+        %td= actor.speed
+        %td= actor.strength
+        %td= actor.willpower
+        %td= actor.birthsign
+        %td= actor.heavy_armour
+        %td= actor.medium_armour
+        %td= actor.spear
+        %td= actor.acrobatics
+        %td= actor.armourer
+        %td= actor.axe
+        %td= actor.blunt_weapon
+        %td= actor.long_blade
+        %td= actor.block
+        %td= actor.light_armour
+        %td= actor.marksman
+        %td= actor.sneak
+        %td= actor.athletics
+        %td= actor.hand_to_hand
+        %td= actor.short_blade
+        %td= actor.unarmoured
+        %td= actor.illusion
+        %td= actor.mercantile
+        %td= actor.speechcraft
+        %td= actor.alchemy
+        %td= actor.conjuration
+        %td= actor.enchant
+        %td= actor.security
+        %td= actor.alteration
+        %td= actor.destruction
+        %td= actor.mysticism
+        %td= actor.restoration
+        %td= actor.fire_resist
+        %td= actor.frost_resist
+        %td= actor.poison_resist
+        %td= actor.shock_resist
+        %td= actor.magicka_resist
+        %td= actor.disease_resist
+        %td= link_to 'Show', actor
+        %td= link_to 'Edit', edit_actor_path(actor)
+        %td= link_to 'Destroy', actor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Actor', new_actor_path
