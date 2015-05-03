@@ -2,7 +2,6 @@
 
 ===== TODO:
 
-- Login
 - Character Creator (new character)
 - Formula calculator that uses character stats
 - Character sheet page (editable)
@@ -17,3 +16,7 @@
   - Location manager
   - Campaign details manager
   - Quest Manager
+
+===== DONE:
+
+- Login
