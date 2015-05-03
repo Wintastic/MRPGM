@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :player_characters
-
   resources :actors
 
   get 'user_sessions/new'

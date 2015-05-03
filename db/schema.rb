@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150503030538) do
+ActiveRecord::Schema.define(version: 20150503150756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,10 +69,9 @@ ActiveRecord::Schema.define(version: 20150503030538) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-  end
-
-  create_table "player_characters", force: true do |t|
+    t.string   "type"
     t.string   "specialization"
+    t.string   "birthsign"
     t.string   "favoured_attribute1"
     t.string   "favoured_attribute2"
     t.string   "major_skill1"
@@ -85,9 +84,6 @@ ActiveRecord::Schema.define(version: 20150503030538) do
     t.string   "minor_skill3"
     t.string   "minor_skill4"
     t.string   "minor_skill5"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "birthsign"
   end
 
   create_table "users", force: true do |t|

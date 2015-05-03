@@ -3,17 +3,19 @@
 %table
   %thead
     %tr
-      %th Email
-      %th Name
+      - User.column_names.each do |attr_name, _|
+        %th
+          = attr_name
       %th
       %th
       %th
 
   %tbody
-    - @users.each do |user|
+    - @users.sort_by(&:id).each do |user|
       %tr
-        %td= user.email
-        %td= user.name
+        - user.attributes.each do |_, attr_value|
+          %th
+            = attr_value
         %td= link_to 'Show', user
         %td= link_to 'Edit', edit_user_path(user)
         %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }

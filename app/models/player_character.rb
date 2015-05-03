@@ -1,2 +1,2 @@
-class PlayerCharacter < ActiveRecord::Base
+class PlayerCharacter < Actor
 end

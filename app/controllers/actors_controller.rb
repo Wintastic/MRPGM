@@ -69,6 +69,7 @@ class ActorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def actor_params
-      params.require(:actor).permit(:name, :race, :gender, :level, :character_class, :health, :magicka, :fatigue, :encumbrance, :agility, :endurance, :intelligence, :luck, :personality, :speed, :strength, :willpower, :heavy_armour, :medium_armour, :spear, :acrobatics, :armourer, :axe, :blunt_weapon, :long_blade, :block, :light_armour, :marksman, :sneak, :athletics, :hand_to_hand, :short_blade, :unarmoured, :illusion, :mercantile, :speechcraft, :alchemy, :conjuration, :enchant, :security, :alteration, :destruction, :mysticism, :restoration, :fire_resist, :frost_resist, :poison_resist, :shock_resist, :magicka_resist, :disease_resist)
+      params.require(:actor).permit(:name, :race, :gender, :level, :character_class, :health, :magicka, :fatigue, :encumbrance, :agility, :endurance, :intelligence, :luck, :personality, :speed, :strength, :willpower, :heavy_armour, :medium_armour, :spear, :acrobatics, :armourer, :axe, :blunt_weapon, :long_blade, :block, :light_armour, :marksman, :sneak, :athletics, :hand_to_hand, :short_blade, :unarmoured, :illusion, :mercantile, :speechcraft, :alchemy, :conjuration, :enchant, :security, :alteration, :destruction, :mysticism, :restoration, :fire_resist, :frost_resist, :poison_resist, :shock_resist, :magicka_resist, :disease_resist,
+                                    :specialization, :birthsign, :favoured_attribute1, :favoured_attribute2, :major_skill1, :major_skill2, :major_skill3, :major_skill4, :major_skill5, :minor_skill1, :minor_skill2, :minor_skill3, :minor_skill4, :minor_skill5)
     end
 end
