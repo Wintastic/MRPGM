@@ -1,0 +1,17 @@
+.creator-input {
+  width: 40%;
+  float: left;
+}
+
+.creator-output {
+  width: 40%;
+  float: left;
+
+  .attributes {
+    border: 2px black solid;
+  }
+}
+
+td.separator {
+  border-bottom: 1px black solid;
+}
