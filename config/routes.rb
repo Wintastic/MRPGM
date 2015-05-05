@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :actors
 
   get 'creators/player_character' => 'creators#player_character'
-  get 'creators/calculate_attribute' => 'creators#calculate_attribute'
+  get 'creators/calculate_attributes' => 'creators#calculate_attributes'
 
   get 'login' => 'user_sessions#new', as: :login
   post 'logout' => 'user_sessions#destroy', as: :logout

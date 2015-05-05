@@ -9,40 +9,26 @@ module CreatorsHelper
   @strength_values = {altmer: [30, 30], argonian: [40, 40], bosmer: [30, 30], breton: [40, 30], dunmer: [40, 40], imperial: [40, 40], khajiit: [40, 30], nord: [50, 50], orc: [45, 45], redguard: [50, 40]}
   @willpower_values = {altmer: [40, 40], argonian: [30, 40], bosmer: [30, 30], breton: [50, 50], dunmer: [30, 30], imperial: [30, 40], khajiit: [30, 30], nord: [40, 50], orc: [50, 45], redguard: [30, 30]}
 
-  def self.calculate_attribute(attribute, race, gender)
-    case attribute.to_sym
-      when :agility
-        puts '1'
-        puts @agility_values
-        @agility_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :endurance
-        @endurance_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :intelligence
-        @intelligence_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :luck
-        @luck_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :personality
-        @personality_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :speed
-        @speed_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :strength
-        @strength_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :willpower
-        @willpower_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :health
-        endurance = @endurance_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-        strength = @strength_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-        (endurance + strength) / 2
-      when :magicka
-        @intelligence_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-      when :fatigue
-        total = 0
-        total += @agility_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-        total += @endurance_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-        total += @strength_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-        total += @willpower_values[race.to_sym][gender.to_sym == :m ? 0 : 1]
-        total
-    end
+  def self.calculate_attributes(params)
+    race = params[:race].to_sym
+    gender = params[:gender].to_sym
+    favoured_attribute1 = params[:favoured_attribute1].to_sym
+    favoured_attribute2 = params[:favoured_attribute2].to_sym
+
+    agility = @agility_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :agility || favoured_attribute2 == :agility ? 5 : 0)
+    endurance = @endurance_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :endurance || favoured_attribute2 == :endurance ? 5 : 0)
+    intelligence = @intelligence_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :intelligence || favoured_attribute2 == :intelligence ? 5 : 0)
+    luck = @luck_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :luck || favoured_attribute2 == :luck ? 5 : 0)
+    personality = @personality_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :personality || favoured_attribute2 == :personality ? 5 : 0)
+    speed = @speed_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :speed || favoured_attribute2 == :speed ? 5 : 0)
+    strength = @strength_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :strength || favoured_attribute2 == :strength ? 5 : 0)
+    willpower = @willpower_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :willpower || favoured_attribute2 == :willpower ? 5 : 0)
+    health = (endurance + strength) / 2
+    magicka = intelligence
+    fatigue = agility + endurance + strength + willpower
+
+    {agility: agility, endurance: endurance, intelligence: intelligence, luck: luck, personality: personality,
+     speed: speed, strength: strength, willpower: willpower, health: health, magicka: magicka, fatigue: fatigue}.to_json
   end
 
   def get_races

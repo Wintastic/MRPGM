@@ -4,8 +4,8 @@ class CreatorsController < ApplicationController
     @player_character = PlayerCharacter.new
   end
 
-  def calculate_attribute
-    result = CreatorsHelper.calculate_attribute(params[:attribute], params[:race], params[:gender])
+  def calculate_attributes
+    result = CreatorsHelper.calculate_attributes(params)
     render text: result
   end
 
