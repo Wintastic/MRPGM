@@ -1,85 +1,85 @@
 %h2 Character Creator
 
-.creator-input
-  = form_for(@player_character, :url => {:controller => 'actors',:action => 'create'}, as: :actor) do |f|
-    .field
-      = f.label :name
-      = f.text_field :name
-    .field
-      = f.label :race
-      = f.select :race, get_races.map { |e| e.titleize }
-    .field
-      = f.label :gender
-      = f.label 'M'
-      = f.radio_button :gender, 'male', checked: true
-      = f.label 'F'
-      = f.radio_button :gender, 'female'
-    .field
-      = f.label :birthsign
-      = f.select :birthsign, get_birthsigns.map { |e| e.titleize }
-    .field
-      = f.label :character_class
-      = f.text_field :character_class
-    .field
-      = f.label :specialization
-      = f.select :specialization, get_specializations.map { |e| e.titleize }
-    .field
-      = f.label 'Favoured attributes'
-      = f.select :favoured_attribute1, get_attributes.map { |e| e.titleize }
-      = f.select :favoured_attribute2, get_attributes.map { |e| e.titleize }
-    .field
-      = f.label 'Major Skills'
-      = f.select :major_skill1, get_skills.map { |e| e.titleize }
-      = f.select :major_skill2, get_skills.map { |e| e.titleize }
-      = f.select :major_skill3, get_skills.map { |e| e.titleize }
-      = f.select :major_skill4, get_skills.map { |e| e.titleize }
-      = f.select :major_skill5, get_skills.map { |e| e.titleize }
-    .field
-      = f.label 'Minor Skills'
-      = f.select :minor_skill1, get_skills.map { |e| e.titleize }
-      = f.select :minor_skill2, get_skills.map { |e| e.titleize }
-      = f.select :minor_skill3, get_skills.map { |e| e.titleize }
-      = f.select :minor_skill4, get_skills.map { |e| e.titleize }
-      = f.select :minor_skill5, get_skills.map { |e| e.titleize }
-    .actions
-      = f.submit 'Reset', type: :reset
-      = f.submit 'Create'
+.character-creator
+  .creator-input
+    = form_for(@player_character, :url => {:controller => 'actors',:action => 'create'}, as: :actor) do |f|
+      .field
+        = f.label :name
+        = f.text_field :name
+      .field
+        = f.label :race
+        = f.select :race, get_races.map { |e| e.titleize }
+      .field
+        = f.label :gender
+        = f.label 'M'
+        = f.radio_button :gender, 'male', checked: true
+        = f.label 'F'
+        = f.radio_button :gender, 'female'
+      .field
+        = f.label :birthsign
+        = f.select :birthsign, get_birthsigns.map { |e| e.titleize }
+      .field
+        = f.label :character_class
+        = f.text_field :character_class
+      .field
+        = f.label :specialization
+        = f.select :specialization, get_specializations.map { |e| e.titleize }
+      .field
+        = f.label 'Favoured attributes'
+        = f.select :favoured_attribute1, get_attributes.map { |e| e.titleize }
+        = f.select :favoured_attribute2, get_attributes.map { |e| e.titleize }
+      .field
+        = f.label 'Major Skills'
+        = f.select :major_skill1, get_skills.map { |e| e.titleize }
+        = f.select :major_skill2, get_skills.map { |e| e.titleize }
+        = f.select :major_skill3, get_skills.map { |e| e.titleize }
+        = f.select :major_skill4, get_skills.map { |e| e.titleize }
+        = f.select :major_skill5, get_skills.map { |e| e.titleize }
+      .field
+        = f.label 'Minor Skills'
+        = f.select :minor_skill1, get_skills.map { |e| e.titleize }
+        = f.select :minor_skill2, get_skills.map { |e| e.titleize }
+        = f.select :minor_skill3, get_skills.map { |e| e.titleize }
+        = f.select :minor_skill4, get_skills.map { |e| e.titleize }
+        = f.select :minor_skill5, get_skills.map { |e| e.titleize }
+      .actions
+        = f.submit 'Create'
 
-.creator-output
-  %h3 Attributes
-  %table.attributes
-    %tr
-      %td Agility
-      %td#agility-value
-    %tr
-      %td Endurance
-      %td#endurance-value
-    %tr
-      %td Intelligence
-      %td#intelligence-value
-    %tr
-      %td Luck
-      %td#luck-value
-    %tr
-      %td Personality
-      %td#personality-value
-    %tr
-      %td Speed
-      %td#speed-value
-    %tr
-      %td Strength
-      %td#strength-value
-    %tr
-      %td Willpower
-      %td#willpower-value
-    %tr
-      %td.separator
-    %tr
-      %td Health
-      %td#health-value
-    %tr
-      %td Magicka
-      %td#magicka-value
-    %tr
-      %td Fatigue
-      %td#fatigue-value
+  .creator-output
+    %h3 Attributes
+    %table.attributes
+      %tr
+        %td Agility
+        %td#agility-value
+      %tr
+        %td Endurance
+        %td#endurance-value
+      %tr
+        %td Intelligence
+        %td#intelligence-value
+      %tr
+        %td Luck
+        %td#luck-value
+      %tr
+        %td Personality
+        %td#personality-value
+      %tr
+        %td Speed
+        %td#speed-value
+      %tr
+        %td Strength
+        %td#strength-value
+      %tr
+        %td Willpower
+        %td#willpower-value
+      %tr
+        %td.separator
+      %tr
+        %td Health
+        %td#health-value
+      %tr
+        %td Magicka
+        %td#magicka-value
+      %tr
+        %td Fatigue
+        %td#fatigue-value

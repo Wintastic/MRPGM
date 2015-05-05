@@ -1,6 +1,7 @@
 $(document).ready ->
-  $('.field').bind 'keyup change', updateAttributes
-#  updateAttributes()
+  if $('.character-creator').length == 1
+    $('.field').bind 'keyup change', updateAttributes
+    updateAttributes()
 
 
 updateAttributes = () ->
