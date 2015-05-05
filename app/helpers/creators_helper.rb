@@ -15,14 +15,14 @@ module CreatorsHelper
     favoured_attribute1 = params[:favoured_attribute1].to_sym
     favoured_attribute2 = params[:favoured_attribute2].to_sym
 
-    agility = @agility_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :agility || favoured_attribute2 == :agility ? 5 : 0)
-    endurance = @endurance_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :endurance || favoured_attribute2 == :endurance ? 5 : 0)
-    intelligence = @intelligence_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :intelligence || favoured_attribute2 == :intelligence ? 5 : 0)
-    luck = @luck_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :luck || favoured_attribute2 == :luck ? 5 : 0)
-    personality = @personality_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :personality || favoured_attribute2 == :personality ? 5 : 0)
-    speed = @speed_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :speed || favoured_attribute2 == :speed ? 5 : 0)
-    strength = @strength_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :strength || favoured_attribute2 == :strength ? 5 : 0)
-    willpower = @willpower_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :willpower || favoured_attribute2 == :willpower ? 5 : 0)
+    agility = @agility_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :agility || favoured_attribute2 == :agility ? 10 : 0)
+    endurance = @endurance_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :endurance || favoured_attribute2 == :endurance ? 10 : 0)
+    intelligence = @intelligence_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :intelligence || favoured_attribute2 == :intelligence ? 10 : 0)
+    luck = @luck_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :luck || favoured_attribute2 == :luck ? 10 : 0)
+    personality = @personality_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :personality || favoured_attribute2 == :personality ? 10 : 0)
+    speed = @speed_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :speed || favoured_attribute2 == :speed ? 10 : 0)
+    strength = @strength_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :strength || favoured_attribute2 == :strength ? 10 : 0)
+    willpower = @willpower_values[race][gender == :m ? 0 : 1] + (favoured_attribute1 == :willpower || favoured_attribute2 == :willpower ? 10 : 0)
     health = (endurance + strength) / 2
     magicka = intelligence
     fatigue = agility + endurance + strength + willpower
