@@ -1,6 +1,6 @@
 $(document).ready ->
   $('.field').bind 'keyup change', updateAttributes
-  updateAttributes()
+#  updateAttributes()
 
 
 updateAttributes = () ->
@@ -20,4 +20,14 @@ updateAttributes = () ->
       attributes = JSON.parse(data)
       for attr of attributes
         $("td##{attr}-value").html(attributes[attr])
+        $("td##{attr}-value").css( "color", getColor(attr, attributes[attr]))
 
+getColor = (attr, value) ->
+  if(attr == "fatigue" || value == 40)
+    "black"
+  else if (value < 40)
+    "red"
+  else if (value > 40)
+    "green"
+  else
+    "black"
