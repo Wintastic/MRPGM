@@ -1,24 +1,149 @@
 #sidebar
   %h1
     Contents
-  %h2
-    %a{href:'#attributes'} 1. Attributes
-  %h3
-    %a{href:'#strength'} Strength
-  %h3
-    %a{href:'#intelligence'} Intelligence
-  %h3
-    %a{href:'#willpower'} Willpower
-  %h3
-    %a{href:'#agility'} Agility
-  %h3
-    %a{href:'#speed'} Speed
-  %h3
-    %a{href:'#endurance'} Endurance
-  %h3
-    %a{href:'#personality'} Personality
-  %h3
-    %a{href:'#luck'} Luck
+  #cssmenu
+    %ul
+      %li.has-sub
+        %a{href: "#attributes"}
+          %span Attributes
+        %ul
+          %li.last
+            %a{href: "#strength"}
+              %span Strength
+          %li.last
+            %a{href: "#intelligence"}
+              %span Intelligence
+          %li.last
+            %a{href: "#willpower"}
+              %span Willpower
+          %li.last
+            %a{href: "#agility"}
+              %span Agility
+          %li.last
+            %a{href: "#speed"}
+              %span Speed
+          %li.last
+            %a{href: "#endurance"}
+              %span Endurance
+          %li.last
+            %a{href: "#personality"}
+              %span Personality
+          %li.last
+            %a{href: "#luck"}
+              %span Luck
+          %li.last
+            %a{href: "#health"}
+              %span Health
+          %li.last
+            %a{href: "#fatigue"}
+              %span Fatigue
+          %li.last
+            %a{href: "#magicka"}
+              %span Magicka
+      %li.has-sub
+        %a{href: "#skills"}
+          %span Skills
+        %ul
+          %li.has-sub
+            %a{href: "#combat"}
+              %span Combat
+            %ul
+              %li
+                %a{href: "#armourer"}
+                  %span Armourer
+              %li
+                %a{href: "#athletics"}
+                  %span Athletics
+              %li
+                %a{href: "#axe"}
+                  %span Axe
+              %li
+                %a{href: "#block"}
+                  %span Block
+              %li
+                %a{href: "#blunt_weapon"}
+                  %span Blunt Weapon
+              %li
+                %a{href: "#heavy_armour"}
+                  %span Heavy Armour
+              %li
+                %a{href: "#long_blade"}
+                  %span Long Blade
+              %li
+                %a{href: "#medium_armour"}
+                  %span Medium Armour
+              %li
+                %a{href: "#spear"}
+                  %span Spear
+          %li.has-sub
+            %a{href: "#magic"}
+              %span Magic
+            %ul
+              %li
+                %a{href: "#alchemy"}
+                  %span Alchemy
+              %li
+                %a{href: "#alteration"}
+                  %span Alteration
+              %li
+                %a{href: "#conjuration"}
+                  %span Conjuration
+              %li
+                %a{href: "#destruction"}
+                  %span Destruction
+              %li
+                %a{href: "#enchant"}
+                  %span Enchant
+              %li
+                %a{href: "#illusion"}
+                  %span Illusion
+              %li
+                %a{href: "#mysticism"}
+                  %span Mysticism
+              %li
+                %a{href: "#restoration"}
+                  %span Restoration
+              %li
+                %a{href: "#unarmoured"}
+                  %span Unarmoured
+          %li.has-sub
+            %a{href: "#stealth"}
+              %span Stealth
+            %ul
+              %li
+                %a{href: "#acrobatics"}
+                  %span Acrobatics
+              %li
+                %a{href: "#hand_to_hand"}
+                  %span Hand-to-hand
+              %li
+                %a{href: "#light_armour"}
+                  %span Light Armour
+              %li
+                %a{href: "#marksman"}
+                  %span Marksman
+              %li
+                %a{href: "#mercantile"}
+                  %span Mercantile
+              %li
+                %a{href: "#security"}
+                  %span Security
+              %li
+                %a{href: "#short_blade"}
+                  %span Short Blade
+              %li
+                %a{href: "#sneak"}
+                  %span Sneak
+              %li
+                %a{href: "#speechcraft"}
+                  %span Speechcraft
+
+      %li.last
+        %a{href: "http://uesp.net/wiki/Main_Page"}
+          %span UESP Wiki
+
+
+
 
 #page-wrap
   %h1 Compendium
@@ -98,7 +223,7 @@
 
   %h2#skills 2. Skills
 
-  %h3 Acrobatics
+  %h3#acrobatics Acrobatics
   Determines jump distance and ability to avoid damage when falling from great heights.
   .small-text
     Governing attribute:
@@ -106,3 +231,197 @@
     %br
       Specialization: Stealth
 
+  %h3#alchemy Alchemy
+  ass
+  .small-text
+    Governing attribute:
+    %a{href: '#intelligence'} Intelligence
+    %br
+      Specialization: Magic
+
+  %h3#alteration Alteration
+
+  .small-text
+    Governing attribute:
+    %a{href: '#willpower'} Willpower
+    %br
+      Specialization:
+  %h3#armourer Armourer
+
+  .small-text
+    Governing attribute:
+    %a{href: '#strength'} Strength
+    %br
+      Specialization:
+
+  %h3#athletics Athletics
+
+  .small-text
+    Governing attribute:
+    %a{href: '#speed'} Speed
+    %br
+      Specialization:
+  %h3#axe Axe
+
+  .small-text
+    Governing attribute:
+    %a{href: '#strength'} Strength
+    %br
+      Specialization:
+
+  %h3#block Block
+
+  .small-text
+    Governing attribute:
+    %a{href: '#agility'} Agility
+    %br
+      Specialization:
+  %h3#blunt_weapon Blunt Weapon
+
+  .small-text
+    Governing attribute:
+    %a{href: '#strength'} Strength
+    %br
+      Specialization:
+
+  %h3#conjuration Conjuration
+
+  .small-text
+    Governing attribute:
+    %a{href: '#intelligence'} Intelligence
+    %br
+      Specialization:
+  %h3#destruction Destruction
+
+  .small-text
+    Governing attribute:
+    %a{href: '#willpower'} Willpower
+    %br
+      Specialization:
+
+  %h3#enchant Enchant
+
+  .small-text
+    Governing attribute:
+    %a{href: '#intelligence'} Intelligence
+    %br
+      Specialization:
+  %h3#hand_to_hand Hand-to-hand
+
+  .small-text
+    Governing attribute:
+    %a{href: '#speed'} Speed
+    %br
+      Specialization:
+
+  %h3#heavy_armour Heavy Armour
+
+  .small-text
+    Governing attribute:
+    %a{href: '#endurance'} Endurance
+    %br
+      Specialization:
+  %h3#illusion Illusion
+
+  .small-text
+    Governing attribute:
+    %a{href: '#personality'} Personality
+    %br
+      Specialization:
+
+  %h3#light_armour Light Armour
+
+  .small-text
+    Governing attribute:
+    %a{href: '#agility'} Agility
+    %br
+      Specialization:
+  %h3#long_blade Long Blade
+
+  .small-text
+    Governing attribute:
+    %a{href: '#strength'} Strength
+    %br
+      Specialization:
+
+  %h3#marksman Marksman
+
+  .small-text
+    Governing attribute:
+    %a{href: '#agility'} Agility
+    %br
+      Specialization:
+  %h3#medium_armour Medium Armour
+
+  .small-text
+    Governing attribute:
+    %a{href: '#endurance'} Endurance
+    %br
+      Specialization:
+
+  %h3#mercantile Mercantile
+
+  .small-text
+    Governing attribute:
+    %a{href: '#personality'} Personality
+    %br
+      Specialization:
+  %h3#mysticism Mysticism
+
+  .small-text
+    Governing attribute:
+    %a{href: '#willpower'} Willpower
+    %br
+      Specialization:
+
+  %h3#restoration Restoration
+
+  .small-text
+    Governing attribute:
+    %a{href: '#willpower'} Willpower
+    %br
+      Specialization:
+  %h3#security Security
+
+  .small-text
+    Governing attribute:
+    %a{href: '#intelligence'} Intelligence
+    %br
+      Specialization:
+
+  %h3#short_blade Short Blade
+
+  .small-text
+    Governing attribute:
+    %a{href: '#speed'} Speed
+    %br
+      Specialization:
+  %h3#sneak Sneak
+
+  .small-text
+    Governing attribute:
+    %a{href: '#agility'} Agility
+    %br
+      Specialization:
+
+  %h3#spear Spear
+
+  .small-text
+    Governing attribute:
+    %a{href: '#endurance'} Endurance
+    %br
+      Specialization:
+  %h3#speechcraft Speechcraft
+
+  .small-text
+    Governing attribute:
+    %a{href: '#personality'} Personality
+    %br
+      Specialization:
+  %h3#unarmoured Unarmoured
+
+  .small-text
+    Governing attribute:
+    %a{href: '#speed'} Speed
+    %br
+      Specialization:
