@@ -83,3 +83,28 @@
       %tr
         %td Fatigue
         %td#fatigue-value
+
+    %h3 Skills
+    %table.skills
+      %tr
+        %th Combat
+      - for skill in get_combat_skills
+        %tr
+          %td=skill.titleize
+          %td{id: "#{skill}-value"}
+
+    %table.skills
+      %tr
+        %th Magic
+      - for skill in get_magic_skills
+        %tr
+          %td=skill.titleize
+          %td{id: "#{skill}-value"}
+
+    %table.skills
+      %tr
+        %th Stealth
+      - for skill in get_stealth_skills
+        %tr
+          %td=skill.titleize
+          %td{id: "#{skill}-value"}
